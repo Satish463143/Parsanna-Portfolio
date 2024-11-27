@@ -1,0 +1,77 @@
+@import url("https://use.typekit.net/jza0yuk.css");
+@import url("https://use.typekit.net/jza0yuk.css");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+:root{
+  --white:#fff;
+  --black:#000;
+  --pri_color:#D77DAA;
+  /* --sec_color: #FFD700; */
+  --sec_color: #808080;
+}
+Link, a, button{
+  cursor: pointer;
+  color: var(--white);
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,p{
+  color: var(--white);
+}
+.headers{
+  font-family: "havelock-titling-variable", sans-serif;
+  font-variation-settings: "wght" 559;
+}
+.container{
+  /* max-width: 90%; */
+  margin: auto;  
+}
+.container {
+  max-width: 97%;
+}
+
+@media (min-width: 601px) and (max-width: 1300px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1301px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+body{
+  background: var(--black);
+  font-family: "enra-sans-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+}
+ 
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* For Firefox
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+} */

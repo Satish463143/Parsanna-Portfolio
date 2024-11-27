@@ -1,0 +1,15 @@
+.main_title{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.main_title h1{
+    font-size: 90px;
+    color: var(--pri_color);
+}
+.main_title P{
+    max-width: 700PX;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 10px;
+}

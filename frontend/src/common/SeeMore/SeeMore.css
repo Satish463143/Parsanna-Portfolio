@@ -1,0 +1,23 @@
+.seemore_btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+
+}
+.seemore_btn button{
+    background: var(--pri_color);
+    padding: 15px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 60px;
+    transition: 0.2s ;
+}
+.seemore_btn button span{
+    font-size: 17px;
+}
+.seemore_btn button:hover{
+    background: none;
+    border: 2px solid var(--pri_color);
+    box-shadow: 1px 1px 10px 2px var(--pri_color);
+}
