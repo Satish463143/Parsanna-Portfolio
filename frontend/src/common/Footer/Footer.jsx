@@ -9,7 +9,7 @@ const Footer = () => {
             <video src={footerVideo} autoPlay loop muted></video>
             <div className="footer_overlay"></div>
             <div className="footer_content">
-                <div className="container">
+                <div className="container" data-aos="zoom-in-down">
                     <div className="footer_content_title">
                         <h1 className='bold_fonts'>
                             discover your <br /> brand's story - verse                            

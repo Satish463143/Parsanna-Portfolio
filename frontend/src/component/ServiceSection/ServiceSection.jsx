@@ -23,7 +23,7 @@ const ServiceSection = () => {
         />
         <div style={{marginTop:'50px'}}>
           <div className="sticky-div service_box">
-            <div className="container">
+            <div className="container" data-aos="fade-right">
               <div className="service_box_grid">
                 <div className="service_number"> <h1>1</h1></div>
                 <div className="service_content">
@@ -37,7 +37,7 @@ const ServiceSection = () => {
             </div>
           </div>
           <div className="sticky-div service_box" style={{background:"var(--black)"}}>
-            <div className="container">
+            <div className="container"data-aos="fade-right" >
               <div className="service_box_grid">
                 <div className="service_number"> <h1 style={{color:'var(--pri_color)'}}>2</h1></div>
                 <div className="service_content">
@@ -51,7 +51,7 @@ const ServiceSection = () => {
             </div>
           </div>
           <div className="sticky-div service_box">
-            <div className="container">
+            <div className="container" data-aos="fade-right" >
               <div className="service_box_grid">
                 <div className="service_number"> <h1>3</h1></div>
                 <div className="service_content">

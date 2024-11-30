@@ -46,7 +46,7 @@ const OurClients = () => {
                     <div><p>Trusted By The Best</p></div>
                     <div className="clients_line"></div>
                 </div>
-                <div className="clients_content">
+                <div className="clients_content" data-aos="zoom-out">
                     <h1>The world's leading designer use and love semplice</h1>
                 </div>
                 <div className="clients_links">
