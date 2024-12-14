@@ -1,9 +1,9 @@
 import React from 'react'
 import './VideoBanner.css'
-import desktopVideo from '../../assets/images/Rafting.mp4'
-import mobileVideo from '../../assets/images/mobile video.mp4'
-import mobileImage from '../../assets/images/mobile.png'
-import desktopImage from '../../assets/images/desktop.png'
+import desktopVideo from '../../../assets/images/Rafting.mp4'
+import mobileVideo from '../../../assets/images/mobile video.mp4'
+import mobileImage from '../../../assets/images/mobile.png'
+import desktopImage from '../../../assets/images/desktop.png'
 
 const VideoBanner = () => {
   return (

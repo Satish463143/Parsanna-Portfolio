@@ -1,11 +1,11 @@
 import React from 'react'
 import './Portfolio.css'
-import Title from '../../common/Title/Title'
-import oneImage from '../../assets/images/mood-board-3-1.jpg'
-import twoImage from '../../assets/images/photography.jpg'
-import threeImage from '../../assets/images/musicVideo.jpeg'
-import firstVideo from '../../assets/images/Rafting.mp4'
-import SeeMore from '../../common/SeeMore/SeeMore'
+
+import Title from '../../../common/Title/Title'
+
+import twoImage from '../../../assets/images/photography.jpg'
+import firstVideo from '../../../assets/images/Rafting.mp4'
+import SeeMore from '../../../common/SeeMore/SeeMore'
 const Portfolio = () => {
   return (
     <div>

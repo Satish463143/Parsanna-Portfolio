@@ -27,7 +27,7 @@ const Footer = () => {
                             <p>Copyright 2024 - Prashanna Bajracharya</p>
                         </div>
                         <div className="footer_name">
-                            <h1>Prashanna</h1>
+                            <h1 className='headers'>Prashanna</h1>
                             <p>Bajracharya</p>
                         </div>
                         <div className="footer_develop">

@@ -1,9 +1,9 @@
 import React from 'react'
 import './ServiceSection.css'
-import Title from '../../common/Title/Title'
-import media_production from '../../assets/images/media_production.jpg'
-import photo from '../../assets/images/photo.jpg'
-import digital_content from '../../assets/images/digital-marketing-bs-header-image.jpeg'
+import Title from '../../../common/Title/Title'
+import media_production from '../../../assets/images/media_production.jpg'
+import photo from '../../../assets/images/photo.jpg'
+import digital_content from '../../../assets/images/digital-marketing-bs-header-image.jpeg'
 const ServiceSection = () => {
     window.addEventListener('scroll', () => {
         const stickyDiv = document.querySelector('.sticky-div');

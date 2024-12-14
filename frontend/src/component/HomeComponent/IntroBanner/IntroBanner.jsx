@@ -1,21 +1,21 @@
 import React from 'react'
 import './IntroBanner.css'
 import {Link} from 'react-router-dom'
-import logo from '../../assets/images/logo.png'
+import logo from '../../../assets/images/logo.png'
 
 const IntroBanner = () => {
   return (
     <div className='intro_banner'>
-      <div className="intro_title">
+      <div className="intro_title" >
         <img src={logo} alt="" />
       </div>
       <div className='navbar'>
         <nav>
           <ul>
-            <Link>
-              <li>Home</li>
+            <Link to='/'>
+              <li className='activeMenu'>Home</li>
             </Link>
-            <Link>
+            <Link to='/about_us'>
               <li>About</li>
             </Link>
             <Link>
@@ -46,8 +46,8 @@ const IntroBanner = () => {
         <div className="container">
           <p>Connect With Me.</p>
           <ul> 
-            <li>
-              <a href="https://drive.google.com/file/d/1C19wGLtOJ1KzzfSjhjodvLiwCt4_W9SM/view?pli=1" target='_blank'>
+            <li >
+              <a href="https://drive.google.com/file/d/1C19wGLtOJ1KzzfSjhjodvLiwCt4_W9SM/view?pli=1" target='_blank' >
                 <span>
                   <svg
                     height="29"

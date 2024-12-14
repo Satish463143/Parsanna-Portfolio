@@ -15,6 +15,9 @@
   /* --sec_color: #FFD700; */
   --sec_color: #808080;
 }
+.activeMenu{
+  color: var(--white) !important;
+}
 Link, a, button{
   cursor: pointer;
   color: var(--white);

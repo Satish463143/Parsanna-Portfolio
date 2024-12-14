@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../../common/Title/Title'
+import Title from '../../../common/Title/Title'
 import './OurClients.css'
 
 

@@ -88,6 +88,8 @@
 .footer_name h1{
     color: var(--pri_color);
     font-weight: 600;
+    font-size: 23px;
+    
 }
 .footer_name p{
  letter-spacing: 6px;

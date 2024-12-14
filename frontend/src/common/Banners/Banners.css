@@ -1,0 +1,39 @@
+.banners{
+    width: 100%;
+    height: 50vh;
+    max-height: 600px;
+    position: relative;
+}
+.banner_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.banner_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner_content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    max-height: 600px;
+    width: 100%;
+    justify-content: end;
+}
+.banner_content h1{
+    color: var(--pri_color);
+    font-size: 100px;
+}
+.banner_image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
