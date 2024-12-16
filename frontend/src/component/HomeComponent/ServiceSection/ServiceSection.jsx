@@ -25,7 +25,7 @@ const ServiceSection = () => {
           <div className="sticky-div service_box">
             <div className="container" data-aos="fade-right">
               <div className="service_box_grid">
-                <div className="service_number"> <h1>1</h1></div>
+                <div className="service_number"> <h1 className='bold_fonts'>1</h1></div>
                 <div className="service_content">
                   <h1>media production</h1>
                   <p>From concept to creation, we bring your vision to life. We plan, design, and execute content to meet your needs.</p>
@@ -39,7 +39,7 @@ const ServiceSection = () => {
           <div className="sticky-div service_box" style={{background:"var(--black)"}}>
             <div className="container"data-aos="fade-right" >
               <div className="service_box_grid">
-                <div className="service_number"> <h1 style={{color:'var(--pri_color)'}}>2</h1></div>
+                <div className="service_number"> <h1  className='bold_fonts' style={{color:'var(--pri_color)'}}>2</h1></div>
                 <div className="service_content">
                   <h1 style={{color:'var(--pri_color)'}}>photography & videography</h1>
                   <p style={{color:'var(--sec_color)'}}>We offer professional photography services to capture special moments and create beautiful images.</p>
@@ -53,7 +53,7 @@ const ServiceSection = () => {
           <div className="sticky-div service_box">
             <div className="container" data-aos="fade-right" >
               <div className="service_box_grid">
-                <div className="service_number"> <h1>3</h1></div>
+                <div className="service_number"> <h1 className='bold_fonts'>3</h1></div>
                 <div className="service_content">
                   <h1>digital content</h1>
                   <p>We craft captivating digital content for brands. From trendy reels and social media stories to eye-catching teasers and promotional videos, we bring your brand to life. We also specialize in on-the-ground live coverage, capturing the energy and excitement of your events.</p>
