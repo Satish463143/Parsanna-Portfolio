@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from '../../common/Footer/Footer'
 import Navbar from '../../common/Navbar/Navbar'
+import MobileNav from '../../common/MobileNav/MobileNav'
 
 const LayoutPage = () => {
   const location = useLocation()
@@ -28,6 +29,7 @@ const LayoutPage = () => {
     <div>
         <ScrollToTop/>
         {location.pathname !== '/' && <Navbar />}
+        <MobileNav/>
         <Outlet />
         <Footer/>
     </div>
