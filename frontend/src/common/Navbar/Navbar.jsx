@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className={`navigation ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navigation_grid">
           <div className="navigation_title headers">
-            <h3>Prashanna.</h3>
+            <Link to='/'><h3>Prashanna.</h3></Link>            
           </div>
           <div className='navbar_menu'>
             <nav>

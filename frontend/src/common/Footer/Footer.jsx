@@ -24,7 +24,7 @@ const Footer = () => {
                     <hr />
                     <div className="footer_grid">
                         <div className="footer_copy">
-                            <p>Copyright 2024 - Prashanna Bajracharya</p>
+                            <p>© 2024 Prashanna Bajracharya. All rights reserved.</p>
                         </div>
                         <div className="footer_name">
                             <h1 className='headers'>Prashanna</h1>

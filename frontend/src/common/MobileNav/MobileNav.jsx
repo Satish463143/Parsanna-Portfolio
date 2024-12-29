@@ -54,7 +54,7 @@ const MobileNav = () => {
                     </div>
                 </div>
                 <div className="mobile_logo">
-                    <h1 className='headers'>Prashanna</h1>
+                  <Link to='/'><h1 className='headers'>Prashanna</h1></Link>                    
                 </div>
                 <div className="call_icon">
 

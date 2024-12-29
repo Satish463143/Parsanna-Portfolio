@@ -9,7 +9,7 @@ const Banners = ({image, title, content}) => {
       </div> 
       <div className='banner_image_overlay'></div>
       <div className="container"> 
-        <div className='banner_content'> 
+        <div className='banner_content' data-aos="zoom-in"> 
           <div>
             <h1 className='bold_fonts'>{title}</h1>
             <p>{content}</p>
