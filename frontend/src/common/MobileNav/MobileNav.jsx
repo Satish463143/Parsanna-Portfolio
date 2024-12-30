@@ -28,11 +28,18 @@ const MobileNav = () => {
     else if (path === "/about_us") {
       setMenu("AboutUs");
     }   
+    else if (path === "/portfolio") {
+      setMenu("portfolio");
+    }   
+    else if (path === "/contact") {
+      setMenu("contact");
+    }   
+    else if (path === "/services") {
+      setMenu("services");
+    } 
      else {
       setMenu("");
     }
-
-
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 
@@ -67,19 +74,19 @@ const MobileNav = () => {
             <nav>
                 <ul>
                     <Link to='/'>
-                    <li  onClick={()=> {toogleMenu(); setMenu('Home')}} className={menu === "Home" ? "activeMenu" : ""}>Home</li>
+                      <li  onClick={()=> setMenu('Home')} className={menu === "Home" ? "activeMenu" : ""}>Home</li>
                     </Link>
                     <Link to='/about_us'>
-                    <li onClick={()=> {toogleMenu(); setMenu('AboutUs')}} className={menu === "AboutUs" ? "activeMenu" : ""}>About</li>
+                      <li onClick={()=> setMenu('AboutUs')} className={menu === "AboutUs" ? "activeMenu" : ""}>About</li>
                     </Link>
-                    <Link>
-                    <li>Portfolio</li>
+                    <Link to='/portfolio'>
+                      <li onClick={()=> setMenu('portfolio')} className={menu === "portfolio" ? "activeMenu" : ""}>Portfolio</li>
                     </Link>
-                    <Link>
-                    <li>Services</li>
+                    <Link to='/services'>
+                      <li onClick={()=> setMenu('services')} className={menu === "services" ? "activeMenu" : ""}>Services</li>
                     </Link>
-                    <Link>
-                    <li>Contact</li>
+                    <Link to='/contact'>
+                      <li onClick={()=> setMenu('contact')} className={menu === "contact" ? "activeMenu" : ""}>Contact</li>
                     </Link>
                 </ul>
             </nav>

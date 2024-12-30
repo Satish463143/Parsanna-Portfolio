@@ -18,13 +18,13 @@ const IntroBanner = () => {
             <Link to='/about_us'>
               <li>About</li>
             </Link>
-            <Link>
+            <Link to='/portfolio'>
               <li>Portfolio</li>
             </Link>
-            <Link>
+            <Link to='/services'>
               <li>Services</li>
             </Link>
-            <Link>
+            <Link to='/contact'>
               <li>Contact</li>
             </Link>
           </ul>

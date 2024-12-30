@@ -1,0 +1,92 @@
+.serviceBox_grid{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    width: 100%;
+    justify-content: space-between;
+    margin: 50px 0 100px 0;
+}
+.serviceBox_grid_box{
+    width: 100%;
+    padding: 20px;
+    border: 2px solid var(--white);
+}
+.serviceBox_grid_box img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.serviceBox_grid_box h1{
+    margin: 20px 0;
+    color: var(--pri_color);
+}
+.serviceBox_grid_box p{
+    color: var(--sec_color);
+}
+.service_contact_grid{
+    margin: 50px 0;
+    width: 100%;
+    grid-template-columns: 25% 40% 25%;
+    justify-content: space-between;
+    padding: 20px;
+    display: grid;
+    background: var(--white);
+}
+.service_contact_grid h1, .service_contact_grid p, .service_contact_grid .service_contact_grid_button{
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.service_contact_grid h5{
+    background: var(--pri_color);
+    color: var(--black);
+    padding: 20px 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    text-decoration: underline;
+    font-size: 17px;
+}
+.service_contact_grid h5:hover{
+    background: none;
+    border: 2px solid var(--pri_color);
+
+}
+.service_video {
+    width: 100%;
+    max-height: 650px;
+    padding-left: 10%; /* Default margin for smaller screens */
+    margin: 100px 0 !important;
+}
+
+@media (min-width: 1300px) {
+    .service_video {
+        padding-left: calc((100% - 1300px)/2); /* Center the element for screens wider than 1300px */
+    }
+}
+.service_video video{
+    width: 100%;
+    height: 100%;    
+    object-fit: cover;
+}
+.bookService_grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    margin-top: 370px !important;
+}
+.bookService_grid_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.bookService_grid_img img{
+    width: 100%;
+    height: auto;
+}
