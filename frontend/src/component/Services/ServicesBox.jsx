@@ -28,7 +28,7 @@ const ServicesBox = () => {
             {service.length > 0 && 
                 service.map((item, index) => (
                     <>
-                        <div className="serviceBox_grid_box">
+                        <div className="serviceBox_grid_box" data-aos="flip-up">
                             <img src={image} alt="" />
                             <h1>{item.title}</h1>
                             <p>{item.description}</p>

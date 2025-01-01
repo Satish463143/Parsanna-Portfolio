@@ -6,10 +6,10 @@ const BookService = () => {
   return (
     <div className='container'>
       <div className="bookService_grid">
-        <div className="bookService_grid_img">
+        <div className="bookService_grid_img" data-aos="flip-right">
           <img src={image} alt="" />
         </div>
-        <div className="bookService_grid_content">
+        <div className="bookService_grid_content" data-aos="flip-left">
           <h1>Why book my service?</h1>
           <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure</p>
           <li>

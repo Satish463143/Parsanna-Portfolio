@@ -96,3 +96,6 @@
     /* align-items: center; */
     justify-content: center;
 }
+.ContactContent_grid_form_content p a{
+    text-decoration: underline;
+}

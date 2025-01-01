@@ -16,7 +16,7 @@ const ServicePage = () => {
         <Title title='Service'content='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'/>     
         <ServicesBox/> 
         <ServiceContact/>
-        <div className="service_video"><video src={video} autoPlay loop muted></video></div>
+        <div className="service_video" data-aos="fade-left"><video src={video} autoPlay loop muted></video></div>
         
         <BookService/>
     </div>
