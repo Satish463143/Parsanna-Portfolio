@@ -7,6 +7,21 @@ const { MulterError } = require('multer')
 
 const app = express();
 
+const allowedOrigins = ['http://localhost:5173', 'https://maya-wears.com']; 
+
+const corsOptions = {
+    origin: (origin, callback) => {
+        // Allow requests from allowed origins or no origin (e.g., mobile apps or Postman)
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true, // Allow cookies and credentials
+};
+app.use(cors(corsOptions));
+
 
 // Parser
 app.use(express.json());
@@ -16,7 +31,7 @@ app.use(express.urlencoded({
 
 app.use(router);
 
-app.use((req, res, next) => {
+    app.use((req, res, next) => {       
     next({ status: 404, message: "Resource not found." });
 });
 

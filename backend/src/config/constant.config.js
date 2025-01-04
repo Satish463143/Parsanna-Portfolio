@@ -10,5 +10,9 @@ const Status={
     ACTIVE:"active",
     INACTIVE:"inactive"
 }
+const MediaType={
+    IMAGE:"image",
+    VIDEO:"videdo"
+}
 
-module.exports ={ FileFilterType, Status}
+module.exports ={ FileFilterType, Status, MediaType}

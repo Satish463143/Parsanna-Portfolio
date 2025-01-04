@@ -15,6 +15,10 @@ const serviceSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    createdBy:{
+        type:mongoose.Types.ObjectId,
+        ref:"User"
+    },
 },
 {
     timestamps:true,

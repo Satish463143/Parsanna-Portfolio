@@ -11,6 +11,6 @@ mongoose.connect(process.env.MONGODB_URL,{
     console.log("Database connected sucessfuly")
 })
 .catch((err)=>{
-    console.log(err)
+    console.log('db error', err)
     process.exit(1)
 })

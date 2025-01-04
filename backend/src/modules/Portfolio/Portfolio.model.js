@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { MediaType } = require("../../config/constant.config");
 
 const portfolioSchema = new mongoose.Schema({
   title: {
@@ -17,7 +18,7 @@ const portfolioSchema = new mongoose.Schema({
     {
       type: {
         type: String,
-        enum: ["image", "video"], 
+        enum: [...Object.values(MediaType)], 
         required: true,
       },
       imageUrl: {
@@ -35,11 +36,16 @@ const portfolioSchema = new mongoose.Schema({
       thumbnail: String, // Optional thumbnail for videos
     },
   ],
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
+  createdBy:{
+          type:mongoose.Types.ObjectId,
+          ref:"User"
+      },
+  
+  },{
+      timestamps:true,
+      autoIndex:true,
+      autoCreate:true,
+})
 
 const portfolioModel = mongoose.model("Portfolio", portfolioSchema);
 

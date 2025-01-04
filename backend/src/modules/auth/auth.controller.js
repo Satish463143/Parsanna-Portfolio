@@ -59,6 +59,18 @@ class authController {
         }
 
     }
+    getLoggedInUser= (req, res,next)=>{
+        try{
+            res.json({
+                result:req.authUser,
+                message:"Your profile",
+                meta:null
+            })
+
+        }catch(exception){
+            next(exception)
+        }
+    }
     logout =async(req,res,next)=>{
         try{
             const userId = req.user._id
