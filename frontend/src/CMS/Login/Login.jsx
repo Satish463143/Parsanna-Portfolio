@@ -27,8 +27,6 @@ const Login = () => {
         }
     },[loggedInUser])
 
-    console.log('loggedInUser',loggedInUser)
-
     const loginDTO = Yup.object({
         email: Yup.string().email().required(),
         password: Yup.string().required(),

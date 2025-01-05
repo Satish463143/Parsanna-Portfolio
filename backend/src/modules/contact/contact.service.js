@@ -11,7 +11,7 @@ class ContactService {
             throw exception
         }
     }
-    listData = async(filter)=>{
+    listData = async({skip, filter, limit})=>{
         try{
             const count = await contactModel.countDocuments(filter)
             const data = await contactModel.find(filter)

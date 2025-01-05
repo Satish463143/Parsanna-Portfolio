@@ -6,8 +6,7 @@ class ServiceController {
     serviceDetails;
     create= async(req,res,next)=>{
         try{
-            const data = req.params
-
+            const data = req.body
             data.image = await uploadImage('./public/uploads/service/' + req.file.filename)
             deleteFile('./public/uploads/service/' + req.file.filename)
 

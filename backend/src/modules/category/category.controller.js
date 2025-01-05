@@ -17,7 +17,7 @@ class CategoryController {
             })
 
         }catch(exception){
-            conosle.log(exception)
+            console.log(exception)
             next(exception)
         }
     }
@@ -49,10 +49,8 @@ class CategoryController {
                 }
             } catch (exception) {
                 throw exception
-            }
-    
+            }    
         }
-
     show = async(req,res,next)=>{
         try{
             const id = req.params.id
@@ -93,13 +91,17 @@ class CategoryController {
             await this.#validate(id)
 
             const response =  await CategoryService.delete(id)
+            res.json({
+                result:response,
+                message:"category deleted",
+                meta:null,
+            })
 
         }catch(exception){
             console.log(exception)
             next(exception)
         }
-    }
-    
+    }    
 }
 
 module.exports = new CategoryController

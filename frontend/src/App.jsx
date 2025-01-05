@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './App.css'
 import Home from './page/Home/Home'
-import { BrowserRouter,Routes,Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import LayoutPage from './page/LayoutPage/LayoutPage';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,6 +33,7 @@ import PortfolioEdit from './CMS/Portfolio/PortfolioEdit';
 import Contact from './CMS/Contact/Contact';
 
 const App = () => {
+
   const dispatch = useDispatch()
 
    useEffect(() => {

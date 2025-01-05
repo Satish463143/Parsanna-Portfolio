@@ -3,18 +3,19 @@ import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TextAreaInput,TextInputComponent } from '../../common/Form/Form';
+
 const ContactForm = ({ submitEvent, loading, value }) => {
 
     const contactDTO = Yup.object({
-        fullName: Yup.string().min(2).max(50).required(),
-        email: Yup.string().required(),
-        phone : Yup.string()
+        fullName: Yup.string().min(2).max(50).required("Full name is required"),
+        email: Yup.string().email("Invalid email").required("Email is required"),
+        number: Yup.string()
             .matches(
-              /^\+?[1-9]\d{1,14}$/,
-              "Phone number must be a valid phone number"
+                /^\+?[1-9]\d{1,14}$/,
+                "Phone number must be a valid phone number"
             )
             .required("Phone number is required"),
-        message:Yup.string().nullable().notRequired()
+        message: Yup.string().nullable().notRequired()
     })
     
     const {control, handleSubmit,formState: { errors }} = useForm({
@@ -49,18 +50,18 @@ const ContactForm = ({ submitEvent, loading, value }) => {
                 <br />
             </div>
             <div>
-                <label htmlFor="phone">Phone Number *</label><br />
+                <label htmlFor="number">Phone number *</label><br />
                 <TextInputComponent 
-                    name='phone'
+                    name='number'
                     control={control}
                     defaultValue=''
-                    errMsg={errors?.phone?.message}
+                    errMsg={errors?.number?.message}
                     required:true
                 /> 
                 <br />
             </div>
             <div>
-                <label htmlFor="Message">Message</label><br />
+                <label htmlFor="message">Message</label><br />
                 <TextAreaInput 
                     name='message'
                     control={control}

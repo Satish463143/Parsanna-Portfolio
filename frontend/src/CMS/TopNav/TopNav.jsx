@@ -8,9 +8,9 @@ import { useLogoutMutation } from '../../api/login.api';
 const TopNav = ({ isMenuActive, toggleMenu }) => {
     const navigate = useNavigate()
     const [logoutApi] = useLogoutMutation()
-    const loggedInUser = useSelector((root)=>{
-        return root.user.loggedInUser
-    })
+    // const loggedInUser = useSelector((root)=>{
+    //     return root.user.loggedInUser
+    // })
     const logout = async () => {
         try {
             toast.loading("Logging out...");
@@ -45,7 +45,7 @@ const TopNav = ({ isMenuActive, toggleMenu }) => {
                 <div className='menu_2'></div>
                 <div className='menu_3'></div>
             </div>
-            <p>Hi, Welcome Back {loggedInUser.name}</p>
+            <p>Hi, Welcome Back </p>
         </div>
           
           

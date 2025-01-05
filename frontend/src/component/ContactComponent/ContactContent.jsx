@@ -2,15 +2,36 @@ import React, { useState } from 'react'
 import './ContactComponent.css'
 import image from '../../assets/images/prashanna.jpg'
 import ContactForm from './ContactForm'
+import { useCreateMutation } from '../../api/contact.api'
+import { toast, ToastContainer } from 'react-toastify'
 
 const ContactContent = () => {
     const [loading, setLoading] = useState()
 
-    const submitEvent = ()=>{
+    const [createContact] = useCreateMutation()
+
+    const submitEvent = async(data)=>{
+        setLoading(true)
+        try{
+            const submitData = {
+                ...data
+            }
+            await createContact(submitData).unwrap()
+            setTimeout(()=>toast.success('Thank you for contacting. Will get back to you soon'),500)
+              
+        }catch(exception){
+            console.log(exception)
+            toast.error('Error while sending message')
+        }
+        finally{
+            setLoading(false)
+        }
+
 
     }
   return (
     <div className='container'>
+        <ToastContainer/>
         <div className="ContactContent_grid">
             <div className="ContactContent_grid_img" data-aos="fade-right">
                 <img src={image} alt="" />

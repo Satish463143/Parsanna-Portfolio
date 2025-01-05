@@ -10,6 +10,9 @@
     margin-right: 10px;
     background: none;
     height: 35px;
+    border: 2px solid var(--sec_color);
+    padding-left: 10px;   
+    color: var(--white); 
 }
 .blog_table tbody td{
     padding: 10px;
@@ -200,6 +203,7 @@
 .blog_table th,
 .blog_table td {
     border: 1px solid var(--sec_color);
+    color: var(--white);
 }
 .blog_table table thead th{
     height: 40px;
@@ -237,6 +241,9 @@
     grid-template-columns: 48% 48%;
     
 }
+.banner_form form label{
+    color: var(--white);
+}
 .banner_form form input,.banner_form form textarea,.banner_form form select, .banner_form form video{
     height: 40px;
     border: 1px solid var(--sec_color);
@@ -245,6 +252,8 @@
     width: 100%;
     margin-bottom: 20px;
     margin-top: 5px;
+    color: var(--white);
+    padding-left: 10px;
 }
 .banner_form form textarea{
     height: 80px;
@@ -252,15 +261,14 @@
 
 .banner_form form input[type="submit"]{
     width: 50%;
-    background: rgb(192, 162, 61);
+    background: rgb(59, 229, 67);
     color: var(--w);
     transition: 0.3s;
+    border: none;
 }
 .banner_form form input[type="submit"]:hover{
-    background: none;
-    color: var(--b);
-    border: none;
-    box-shadow: rgba(40, 114, 224, 0.17) 0px -23px 25px 0px inset, rgba(40, 114, 224, 0.15) 0px -36px 30px 0px inset, rgba(40, 114, 224, 0.1) 0px -79px 40px 0px inset, rgba(40, 114, 224, 0.06) 0px 2px 1px, rgba(40, 114, 224, 0.09) 0px 4px 2px, rgba(40, 114, 224, 0.09) 0px 8px 4px, rgba(40, 114, 224, 0.09) 0px 16px 8px, rgba(40, 114, 224, 0.09) 0px 32px 16px;
+    color: var(--b);    
+    opacity: 0.8; 
 }
 .submit_btn:disabled{
     cursor: not-allowed;

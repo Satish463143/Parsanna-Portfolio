@@ -8,7 +8,7 @@ class ContactController {
             const response = await ContactService.create(data)
             res.json({
                 result:response,
-                messaage:"Featured portfolio created",
+                messaage:"contact  created",
                 meta:null
             })
 
@@ -28,7 +28,7 @@ class ContactController {
 
             if(req.query.search){
                 filter = {
-                    title:new RegExp(req.query.search , "i")
+                    fullName:new RegExp(req.query.search , "i")
                 }
             }
 
@@ -49,7 +49,7 @@ class ContactController {
             })
 
         }catch(exception){
-            conosle.log(exception)
+            console.log(exception)
             next(exception)
         }
     }

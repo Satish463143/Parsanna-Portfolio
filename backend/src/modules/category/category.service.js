@@ -14,6 +14,7 @@ class CategoryService {
     listData = async(filter)=>{
         try{
             const data = await categoryModel.find(filter)
+                .sort({_id:"desc"})
             return data
 
         }catch(exception){
@@ -43,7 +44,7 @@ class CategoryService {
            throw exception
         }
     }
-    delete = async()=>{
+    delete = async(id)=>{
         try {
             const response = await categoryModel.findByIdAndDelete(id)
             if (!response) {
