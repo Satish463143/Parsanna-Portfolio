@@ -1,5 +1,6 @@
 
 import { useController } from 'react-hook-form'
+import Select from 'react-select'
 
 export const TextInputComponent = ({type="text",control,name, defaultValue="",required=false, errMsg= null})=>{
     const {field} = useController({
@@ -41,6 +42,40 @@ export const TextAreaInput = ({control,name, defaultValue="",required=false, err
             <span style={{color:'red', fontStyle:'italic'}}>
                 {errMsg}
             </span>
+        </>
+    )
+}
+export const SelectComponent = ({options,control,name,defaultValue,errMsg})=>{
+    const {field} = useController({
+        control:control,
+        name:name,
+        defaultValue:defaultValue,
+        // rules:{
+        //     required:required
+        // }
+    })
+
+    return (
+        <>
+            <Select options={options} {...field} isClearable />
+            <span style={{color:'red', fontStyle:'italic'}}>
+                {errMsg}
+            </span>
+        </>
+    )
+}
+export const OptionsComponent = ({control,name,errMsg,required})=>{
+    return(
+        <>
+            <SelectComponent 
+                options ={
+                    [{label:"Active", value:"active"},{label:"Inactive", value:"inactive"}]
+                }
+                control={control}
+                name={name}
+                errMsg={errMsg}
+                required={required}
+            />
         </>
     )
 }

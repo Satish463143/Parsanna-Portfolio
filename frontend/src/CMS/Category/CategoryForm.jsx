@@ -31,7 +31,7 @@ const CategoryForm = ({submitEvent,loading,detail=null,value}) => {
               control={control}
               type='text'
               defaultValue=''
-              errMsg={errors?.title?.message}
+              errMsg={errors?.name?.message}
               required:true
             />
         </div>

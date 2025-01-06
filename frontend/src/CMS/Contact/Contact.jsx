@@ -58,12 +58,11 @@ const Contact = () => {
                     <td>{row.fullName}</td>
                     <td >
                       {row.email} 
-                    </td>
-                    
+                    </td>                    
                     <td>{row.number}</td>
                     <td width='550px'>{row.message}</td>
-                    <td style={{ textAlign: 'center', width: '150px' }}>
-                      Response            
+                    <td style={{ textAlign: 'center', width: '150px' }} className='response'>
+                      <a href={`mailto:${row.email}`} target='_blank'>Response</a>             
                     </td>
                   </tr>
                 ))

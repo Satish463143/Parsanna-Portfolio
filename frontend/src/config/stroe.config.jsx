@@ -4,6 +4,8 @@ import useReducer from '../reducer/user.reeducer'
 import { categoryApi } from '../api/category.api'
 import { serviceApi } from '../api/service.api'
 import { contactApi } from '../api/contact.api'
+import { clientsApi } from '../api/clients.api'
+import { featuredApi } from '../api/featured.api'
 
 const storeConfig = configureStore({ 
     reducer:{
@@ -12,6 +14,8 @@ const storeConfig = configureStore({
         [categoryApi.reducerPath]:categoryApi.reducer,
         [serviceApi.reducerPath]:serviceApi.reducer,
         [contactApi.reducerPath]:contactApi.reducer,
+        [clientsApi.reducerPath]:clientsApi.reducer,
+        [featuredApi.reducerPath]:featuredApi.reducer,
     },
     middleware:(getDefaultMiddleware)=>
         getDefaultMiddleware()
@@ -19,6 +23,8 @@ const storeConfig = configureStore({
         .concat(categoryApi.middleware)
         .concat(serviceApi.middleware)
         .concat(contactApi.middleware)
+        .concat(clientsApi.middleware)
+        .concat(featuredApi.middleware)
 
 })
 

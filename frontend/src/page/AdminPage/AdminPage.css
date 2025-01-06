@@ -4,6 +4,12 @@
     justify-content: center;
     width: 100%;
 }
+.response a{
+    background: green;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: underline;
+}
 
 .Dashboard_title input{
     border-radius: 25px;

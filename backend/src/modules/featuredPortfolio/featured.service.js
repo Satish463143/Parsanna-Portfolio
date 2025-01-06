@@ -11,10 +11,15 @@ class FeaturedService {
             throw exception
         }
     }
-    listData = async(filter)=>{
+    listData = async({skip=0,limit=10, filter ={}})=>{
         try{
+            const count = await featuredModel.countDocuments(filter)
             const data = await featuredModel.find(filter)
-            return data
+            .populate("createdBy", ["_id","email", "name",])
+                .sort({_id: "desc"})
+                .limit(limit)
+                .skip(skip)
+            return {count, data}
 
         }catch(exception){
             console.log(exception)
@@ -43,7 +48,7 @@ class FeaturedService {
            throw exception
         }
     }
-    delete = async()=>{
+    delete = async(id)=>{
         try {
             const response = await featuredModel.findByIdAndDelete(id)
             if (!response) {

@@ -5,9 +5,12 @@ const { featuredDTO } = require('./featured.request')
 
 const router = require('express').Router()
 
+
+router.get('/list', FeaturedController.listForHome)
+
 router.route('/')
     .post(loginCheck, bodyValidator(featuredDTO), FeaturedController.create)
-    .get(FeaturedController.index)
+    .get(loginCheck,FeaturedController.index)
 
 router.route('/:id')
     .get(loginCheck, FeaturedController.show)

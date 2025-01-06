@@ -1,5 +1,6 @@
 const { required } = require('joi')
 const mongoose = require('mongoose')
+const { Status } = require('../../config/constant.config')
 
 const featruedSchems = new mongoose.Schema({
     title:{
@@ -8,7 +9,6 @@ const featruedSchems = new mongoose.Schema({
     },
     description:{
         type:String,
-        required:true,
     },
     videoUrl:{
         type:String,
@@ -17,6 +17,11 @@ const featruedSchems = new mongoose.Schema({
     videoImageUrl:{
         type:String,
         required:true,
+    },
+    status:{
+        type:String,
+        enum:[...Object.values(Status)],
+        default:Status.INACTIVE
     },
     createdBy:{
         type:mongoose.Types.ObjectId,

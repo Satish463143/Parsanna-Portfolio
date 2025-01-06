@@ -6,7 +6,7 @@ class ClientsController {
     clientsDetails;
     create= async(req,res,next)=>{
         try{
-            const data = req.params
+            const data = req.body
 
             data.image = await uploadImage('./public/uploads/clients/' + req.file.filename)
             deleteFile('./public/uploads/clients/' + req.file.filename)
@@ -36,7 +36,7 @@ class ClientsController {
 
             if(req.query.search){
                 filter = {
-                    title:new RegExp(req.query.search , "i")
+                    link:new RegExp(req.query.search , "i")
                 }
             }
 
