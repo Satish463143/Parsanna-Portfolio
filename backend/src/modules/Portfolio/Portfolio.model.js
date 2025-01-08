@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const { MediaType } = require("../../config/constant.config");
 
 const portfolioSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-  },
+  // title: {
+  //   type: String,
+  //   required: true,
+  // },
+  // description: {
+  //   type: String,
+  // },
   category: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category", 
@@ -28,6 +28,12 @@ const portfolioSchema = new mongoose.Schema({
         },
       },
       videoUrl: {
+        type: String, // YouTube video URL
+        required: function () {
+          return this.type === "video"; // Required if type is 'video'
+        },
+      },
+      videoImageUrl: {
         type: String, // YouTube video URL
         required: function () {
           return this.type === "video"; // Required if type is 'video'

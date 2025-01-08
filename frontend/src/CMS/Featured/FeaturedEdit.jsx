@@ -54,7 +54,7 @@ const FeaturedEdit = () => {
               }
             }: null
           }
-        submitEvent={submitEvent} loading={loading} value='Add Featured Portfolio'/>
+        submitEvent={submitEvent} loading={loading} value='Update Featured Portfolio'/>
       </div>
       
     </div>
