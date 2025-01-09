@@ -43,7 +43,19 @@ class PortfolioController {
         const limit = req.limit || 10
         const skip = (page-1) * limit
 
-        const {count, data } =  await portfolioService.listAll()
+        const {count, data } =  await portfolioService.listAll({
+            skip: skip,
+            limit: limit
+        })
+        res.json({
+            result:data,
+            message:"LIst of all images and videos",
+            meta:{
+                currentPage: page,
+                total: count,
+                limit: limit,
+            }
+        })
     } catch (exception) {
       console.log(exception);
       next(exception);

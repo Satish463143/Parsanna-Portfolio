@@ -79,3 +79,18 @@ export const OptionsComponent = ({control,name,errMsg,required})=>{
         </>
     )
 }
+export const TypeComponent = ({control,name,errMsg,required})=>{
+    return(
+        <>
+            <SelectComponent 
+                options ={
+                    [{label:"Image", value:"image"},{label:"Video", value:"video"}]
+                }
+                control={control}
+                name={name}
+                errMsg={errMsg}
+                required={required}
+            />
+        </>
+    )
+}

@@ -10,9 +10,15 @@ class PortfolioService {
       throw exception;
     }
   };
-  listAll = async (data) => {
+  listAll = async ({ skip = 0, limit = 0, filter }) => {
     try {
-        
+      const count = await portfolioModel.countDocuments(filter);
+      const data = await portfolioModel.find(filter)
+        .populate("createdBy", ["_id", "email", "name"])
+        .sort({ _id: "desc" })
+        .limit(limit)
+        .skip(skip);
+      return { count, data };
     } catch (exception) {
       console.log(exception);
       throw exception;
